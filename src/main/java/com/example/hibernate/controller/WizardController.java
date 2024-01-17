@@ -40,10 +40,7 @@ public class WizardController {
     }
 
     @PostMapping("/wizard")
-    public String postWizard(@RequestBody Wizard wizard) {
-    // public String postWizard(@ModelAttribute Wizard wizard) {
-        System.out.println(wizard.getFirstName());
-        System.out.println("postWizard");
+     public String postWizard(@ModelAttribute Wizard wizard) {
         repository.save(wizard);
         return "redirect:/wizards";
     }

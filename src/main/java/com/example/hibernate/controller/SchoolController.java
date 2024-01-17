@@ -37,9 +37,7 @@ public class SchoolController {
     }
 
     @PostMapping("/school")
-    public String postSchool(@RequestBody School school) {
-        System.out.println(school.getId());
-        System.out.println(school.getName());
+    public String postSchool(@ModelAttribute School school) {
         repository.save(school);
         return "redirect:/schools";
     }
