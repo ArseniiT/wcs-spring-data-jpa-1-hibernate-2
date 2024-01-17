@@ -1,11 +1,11 @@
-package com.wildcodeschool.wildandwizard.entity;
+package com.example.hibernate.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
-// TODO : update this entity
+
 @Entity
-@Table(name = "school")
 public class School {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
